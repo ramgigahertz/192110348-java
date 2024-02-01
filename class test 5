@@ -1,0 +1,90 @@
+1.perfect number 
+
+import java.util.Scanner;
+class nperfectnumbers {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        System.out.println("Enter no.of perfect numbers:");
+        int n=input.nextInt();
+        int sum=0,temp=0;
+        for(int j=2;j<=1000;j++)
+        {
+            if(n>temp)
+                sum=1;
+            for(int i=2;i<j;i++)
+            {
+                if(j%i==0)
+                    sum=sum+i;
+            }
+            if(sum==j)
+            {
+                System.out.print(j+" ");
+                temp=temp+1;
+            }
+        }
+    }
+}
+ 2.common array
+
+                    import java.util.Scanner;
+import java.util.*;
+class common {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        List<Integer> l=new ArrayList<Integer>();
+        System.out.print("Enter the size of the first array : ");
+        int n=sc.nextInt();
+        int a1[]=new int [n];
+        for (int i=0;i<n;i++)
+        {
+            a1[i]=sc.nextInt();
+        }
+        System.out.print("Enter the size of the second array : ");
+        int m=sc.nextInt();
+        int a2[]=new int [m];
+        for (int j=0;j<m;j++)
+        {
+            a2[j]=sc.nextInt();
+        }
+        for(int x=0;x<n;x++)
+        {
+            for(int y=0;y<m;y++)
+            {
+                if(a1[x]==a2[y])
+                {
+                    l.add(a1[x]);
+                }
+            }
+        }
+        System.out.print(l);
+  }
+}
+
+3.vowel
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a statement: ");
+        String statement = scanner.nextLine();
+        int vowelCount = countVowels(statement);
+        System.out.println("Number of vowels in the statement: " + vowelCount);
+    }
+
+    public static int countVowels(String statement) {
+        int count = 0;
+        String lowerCaseStatement = statement.toLowerCase();
+        for (char c : lowerCaseStatement.toCharArray()) {
+            if (isVowel(c)) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    public static boolean isVowel(char c) {
+        return "aeiou".indexOf(c) != -1;
+    }
+}
