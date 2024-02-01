@@ -1,0 +1,23 @@
+package array;
+import java.util.Scanner;
+class stringarray {
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
+        int n;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the value of n: ");
+        n= sc.nextInt();
+        for(int i= 1;i<=n;i++){
+            if(i%3==0 && i%5==0){
+                System.out.println("FIZZ BUSS");
+            }
+            else if(i%3==0){
+                System.out.println("FIZZ");
+            }
+            else if(i%5==0){
+                System.out.println("BUSS");
+            }
+            else {
+                System.out.println(i); }
+        }}
+}
